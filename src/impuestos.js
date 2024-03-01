@@ -1,6 +1,6 @@
-//Clase que representa a un impuesto.
+//Clase que representa los impuestos de un cliente.
 class Impuestos {
-    //Crea una instancia de impuesto.
+    //Crea una instancia de Cliente.
     constructor(montoBrutoAnual, deducciones) {
         this._montoBrutoAnual = montoBrutoAnual;
         this._deducciones = deducciones;
@@ -12,12 +12,8 @@ class Impuestos {
     }
 
     //Establece el monto bruto anual sujeto a impuestos.
-    set montoBrutoAnual(value) {
-        if (value >= 0) {
-            this._montoBrutoAnual = value;
-        } else {
-            console.error("El monto bruto anual debe ser un valor positivo.");
-        }
+    set montoBrutoAnual(montoBrutoAnual) {
+        this._montoBrutoAnual = montoBrutoAnual;
     }
 
     //Obtiene el monto total de deducciones aplicables.
@@ -26,12 +22,8 @@ class Impuestos {
     }
 
     //Establece el monto total de deducciones aplicables.
-    set deducciones(value) {
-        if (value >= 0) {
-            this._deducciones = value;
-        } else {
-            console.error("Las deducciones deben ser un valor positivo.");
-        }
+    set deducciones(deducciones) {
+        this._deducciones = deducciones;
     }
 }
 
